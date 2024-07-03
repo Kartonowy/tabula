@@ -1,0 +1,22 @@
+package components
+
+var title = "DMs Mixer"
+
+templ Hello(name string) {
+	<div>Hello, { name }</div>
+}
+
+templ Page() {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>{ title }</title>
+			<link rel="stylesheet" href="/assets/css/output.css"/>
+		</head>
+		<body class="m-0 bg-slate-500">
+			@Hello("2B")
+		</body>
+	</html>
+}
