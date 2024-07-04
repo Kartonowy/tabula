@@ -1,0 +1,29 @@
+package components
+
+templ NavButton(name string, icon string, route string) {
+	<div
+		class="w-1/4 text-5xl flex justify-center items-center text-center"
+		hx-get={ route }
+		hx-target=".content"
+		hx-swap="innerHTML"
+		hx-trigger="click"
+	>
+		<i class={ "fa-solid " + icon }></i>
+	</div>
+}
+
+templ MusicPlayer() {
+	<div class="h-full w-2/6 bg-black"></div>
+}
+
+templ Dashboard() {
+	<div class="dashboard w-screen h-1/6 flex justify-end">
+		<nav class="flex justify-around bg-cyan-400 w-2/6 h-full">
+			@NavButton("dice", "fa-dice-d20", "/dice")
+			@NavButton("timer", "fa-clock", "/timer")
+			@NavButton("soundboard", "fa-play", "/sounds")
+			@NavButton("music", "fa-music", "/music")
+		</nav>
+		@MusicPlayer()
+	</div>
+}

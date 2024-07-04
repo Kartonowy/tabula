@@ -6,11 +6,16 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-type Hello struct {
-}
 
-func (h Hello) HandleHelloShow(c echo.Context) error {
+func Root(c echo.Context) error {
 
 	return components.Page().Render(c.Request().Context(), c.Response().Writer) 
 }
 
+func RenderWindow(c echo.Context) error {
+	return components.DivCon("whatever").Render(c.Request().Context(), c.Response().Writer)
+}
+
+func RenderMusic(c echo.Context) error {
+	return components.Music().Render(c.Request().Context(), c.Response().Writer)
+}
