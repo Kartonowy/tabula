@@ -1,12 +1,50 @@
 package components
 
-templ Themes() {
-	<div class="w-4/5 h-full bg-yellow-400"></div>
+import "dms_mixer/utils"
+
+var themes = utils.GetThemes()
+
+templ Tile(theme utils.Theme) {
+	<div class="h-60 w-60 p-10 border border-red-700 m-8 cursor-pointer">{ theme.Title }</div>
+}
+
+templ PlaylistEntry(theme utils.Theme) {
+	<li class="h-30 w-full flex flex-row items-center p-2">
+		// <img src="" alt="">
+		<div class="w-16 h-16 bg-black"></div>
+		<span class="text-2xl pl-2">{ theme.Title }</span>
+	</li>
+}
+
+templ PlaylistList() {
+	<div>
+		<ul>
+			for _, item := range themes {
+				@PlaylistEntry(item)
+			}
+		</ul>
+	</div>
+}
+
+templ Tiles() {
+	<div class="interactive w-4/5 h-full bg-yellow-400 flex flex-row flex-wrap">
+		// TODO: make it dynamic
+		for _, item := range themes {
+			@Tile(item)
+		}
+	</div>
+}
+
+templ Sidebar() {
+	<div class="w-1/5">
+		@HomeButton("/music")
+		@PlaylistList()
+	</div>
 }
 
 templ Music() {
-	<div class="size-full">
-		@BackButton("/music")
-		@Themes()
+	<div class="size-full flex flex-row">
+		@Sidebar()
+		@Tiles()
 	</div>
 }

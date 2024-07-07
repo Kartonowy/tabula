@@ -1,0 +1,8 @@
+<div class=\"w-1/4 text-5xl flex justify-center items-center text-center\" hx-get=\"
+\" hx-target=\".content\" hx-swap=\"innerHTML\" hx-trigger=\"click\">
+<i class=\"
+\"></i></div>
+<div class=\"h-full w-2/6 bg-black\"></div>
+<div class=\"dashboard w-screen h-1/6 flex justify-end\"><nav class=\"flex justify-around bg-cyan-400 w-2/6 h-full\">
+</nav>
+</div>

@@ -18,6 +18,7 @@ func main() {
 	e.GET("/music", func(c echo.Context) error {
 		return handlers.RenderMusic(c)
 	})
+	
 
 	e.Static("/assets", "static")
 	e.Logger.Fatal(e.Start(":1323"))

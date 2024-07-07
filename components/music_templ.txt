@@ -1,0 +1,12 @@
+<div class=\"h-60 w-60 p-10 border border-red-700 m-8 cursor-pointer\">
+</div>
+<li class=\"h-30 w-full flex flex-row items-center p-2\"><div class=\"w-16 h-16 bg-black\"></div><span class=\"text-2xl pl-2\">
+</span></li>
+<div><ul>
+</ul></div>
+<div class=\"interactive w-4/5 h-full bg-yellow-400 flex flex-row flex-wrap\">
+</div>
+<div class=\"w-1/5\">
+</div>
+<div class=\"size-full flex flex-row\">
+</div>
